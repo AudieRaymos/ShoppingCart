@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: ubuntu;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul {
+    margin: 0;
+}
+
 .main-header {
+    background-color: rgba(0, 0, 0, .6);
     background-image: url(img/bgimg.jpg);
+    background-blend-mode: multiply;
     background-size: cover;
+    padding-bottom: 30px;
 }
