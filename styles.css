@@ -174,3 +174,15 @@ html, body {
 .tour-btn {
     max-width: 19%;
 }
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
