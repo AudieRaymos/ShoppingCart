@@ -141,3 +141,13 @@ html, body {
     width: 100px;
     height: 100px;
 }
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
