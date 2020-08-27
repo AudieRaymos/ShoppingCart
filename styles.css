@@ -130,3 +130,14 @@ html, body {
 .btn-header:hover {
     background-color: rgba(255, 255, 255, .3);
 }
+
+.btn-play {
+    display: block;
+    margin: auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
