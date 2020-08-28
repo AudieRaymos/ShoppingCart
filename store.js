@@ -7,3 +7,11 @@ for (var i = 0; i < removeCartItemButtons.length; i++) {
         buttonClicked.parentElement.parentElement.remove()
     })
 }
+
+function updateCartTotal () {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRows =cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+}
