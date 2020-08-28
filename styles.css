@@ -291,3 +291,11 @@ html, body {
     font-size: 1.2em;
     margin-right: 25px;
 }
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
