@@ -6,7 +6,6 @@ if (document.readyState == 'loading') {
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItemButtons)
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
@@ -47,6 +46,7 @@ function addToCartClicked(event) {
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src 
     console.log(title, price, imageSrc)
     addItemToCart(title, price, imageSrc)
+    updateCartTotal()
 }
 
 function addItemToCart(title, price, imageSrc) {
@@ -54,6 +54,12 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems. getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (csrtItemNames[i].innerText == title){
+            alert('this item is already added to the cart')
+            return
+        }
+    }
     var cartRowContents = `
                 <div class="cart-item cart-column">
                     <img class="cart-item-image" src="$(imageSrc)" width="100" height="100">
@@ -66,6 +72,7 @@ function addItemToCart(title, price, imageSrc) {
                 </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click, removeCartItem')
 }
 
 function updateCartTotal() {
