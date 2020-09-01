@@ -22,6 +22,8 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
+
+    document.getElementsByClassName('btn-purchase')[]
 }
 
 function removeCartItem(event) {
