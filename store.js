@@ -30,6 +30,10 @@ function ready() {
 function purchaseClicked() {
     alert('Thank you for your purchase!')
     var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItem.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
 }
 
 function removeCartItem(event) {
@@ -52,7 +56,6 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src 
-    console.log(title, price, imageSrc)
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
