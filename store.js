@@ -23,7 +23,13 @@ function ready() {
         button.addEventListener('click', addToCartClicked)
     }
 
-    document.getElementsByClassName('btn-purchase')[]
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('clicked', 
+    purchaseClicked)
+}
+
+function purchaseClicked() {
+    alert('Thank you for your purchase!')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
 }
 
 function removeCartItem(event) {
